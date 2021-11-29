@@ -1,0 +1,41 @@
+@import "/src/assets/styles/settings/colors";
+
+// transitions
+$transition-cubic: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$transition: 0.5s $transition-cubic;
+$transition-slow: 0.7s $transition-cubic;
+$transition-fast: 0.3s $transition-cubic;
+$transition-extra-fast: 0.2s $transition-cubic;
+
+// ------- Media queries -------//
+$viewport-extra-small: 350px; // 350px
+$viewport-small: 576px; // 576px
+$viewport-medium: 992px; // 992px
+$viewport-large: 1025px; // 1025px
+$viewport-extra-large: 1440px; // 1200px
+$viewport-max: 1920px; // 1920px
+
+// ------- Helpers -------//
+$box-shadow-blur-10: 0 5px 10px 5px rgba($color-gray-god, 0.05);
+$box-shadow-blur-4: 0 2px 4px 0 rgba($color-gray-god, 0.05);
+
+// ------- Spacing -------//
+
+// Component spacings
+$space-c-xxs: 0.4rem;
+$space-c-xs: 0.8rem;
+$space-c-s: 1.2rem;
+$space-c-sm: 1.6rem;
+$space-c-m: 2rem;
+$space-c-ml: 2.4rem;
+$space-c-l: 3.2rem;
+$space-c-xl: 3.6rem;
+$space-c-xxl: 4rem;
+$space-c-xxxl: 5.2rem;
+
+// Layout spacings
+$space-l-xs: 2.4rem;
+$space-l-s: 3.2rem;
+$space-l-m: 4rem;
+$space-l-l: 6rem;
+$space-l-xl: 14rem;

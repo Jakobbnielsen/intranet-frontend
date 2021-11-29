@@ -1,0 +1,237 @@
+@use "sass:map";
+
+$s-spacing: (
+	component: (
+		reset: (
+			default: 0,
+			mobile: 0,
+			viewport: 0,
+		),
+		auto: (
+			default: auto,
+			mobile: auto,
+			viewport: auto,
+		),
+		xxs: (
+			default: $space-c-xxs,
+			mobile: 0.4rem,
+			viewport: 0.278vw,
+		),
+		xs: (
+			default: $space-c-xs,
+			mobile: 0.8rem,
+			viewport: 0.556vw,
+		),
+		s: (
+			default: $space-c-s,
+			mobile: 0.6rem,
+			viewport: 0.833vw,
+		),
+		sm: (
+			default: $space-c-sm,
+			mobile: 0.8rem,
+			viewport: 1.111vw,
+		),
+		m: (
+			default: $space-c-m,
+			mobile: 1rem,
+			viewport: 1.389vw,
+		),
+		ml: (
+			default: $space-c-ml,
+			mobile: 1.2rem,
+			viewport: 1.667vw,
+		),
+		l: (
+			default: $space-c-l,
+			mobile: 1.6rem,
+			viewport: 2.222vw,
+		),
+		xl: (
+			default: $space-c-xl,
+			mobile: 1.8rem,
+			viewport: 2.5vw,
+		),
+		xxl: (
+			default: $space-c-xxl,
+			mobile: 2rem,
+			viewport: 2.778vw,
+		),
+		xxxl: (
+			default: $space-c-xxxl,
+			mobile: 2.6rem,
+			viewport: 3.611vw,
+		),
+	),
+	layout: (
+		reset: (
+			default: 0,
+			mobile: 0,
+			viewport: 0,
+		),
+		auto: (
+			default: auto,
+			mobile: auto,
+			viewport: auto,
+		),
+		xs: (
+			default: $space-l-xs,
+			mobile: 1.2rem,
+			viewport: 1.667vw,
+		),
+		s: (
+			default: $space-l-s,
+			mobile: 1.6rem,
+			viewport: 2.222vw,
+		),
+		m: (
+			default: $space-l-m,
+			mobile: 1.2rem,
+			viewport: 2.778vw,
+		),
+		l: (
+			default: $space-l-l,
+			mobile: 2rem,
+			viewport: 4.167vw,
+		),
+		xl: (
+			default: $space-l-xl,
+			mobile: 7rem,
+			viewport: 9.722vw,
+		),
+	),
+);
+
+// Returns the default value defined in the spacing object
+@function spacing($area-value, $size) {
+	@if type-of($s-spacing) == map {
+		$area: map.get($s-spacing, $area-value);
+		$item: map.get($area, $size);
+		@if type-of($item) == map {
+			@return map.get($item, default);
+		}
+	}
+	@return "";
+}
+
+// Syntax .l-mb-xl === layout + space + size (x: vertical og y:horizontal)
+$layout: map.get($s-spacing, layout);
+$component: map.get($s-spacing, component);
+
+@each $name, $values in $component {
+	$viewport: map.get($values, viewport);
+	$mobile: map.get($values, mobile);
+	$default: map.get($values, default);
+
+	.c-m-#{$name} {
+		margin: clamp($mobile, $viewport, $default);
+	}
+	.c-mx-#{$name} {
+		margin-right: clamp($mobile, $viewport, $default);
+		margin-left: clamp($mobile, $viewport, $default);
+	}
+	.c-my-#{$name} {
+		margin-top: clamp($mobile, $viewport, $default);
+		margin-bottom: clamp($mobile, $viewport, $default);
+	}
+	.c-ml-#{$name} {
+		margin-left: clamp($mobile, $viewport, $default);
+	}
+	.c-mr-#{$name} {
+		margin-right: clamp($mobile, $viewport, $default);
+	}
+	.c-mb-#{$name} {
+		margin-bottom: clamp($mobile, $viewport, $default);
+	}
+	.c-mt-#{$name} {
+		margin-top: clamp($mobile, $viewport, $default);
+	}
+
+	// Padding
+	.c-p-#{$name} {
+		padding: clamp($mobile, $viewport, $default);
+	}
+	.c-px-#{$name} {
+		padding-right: clamp($mobile, $viewport, $default);
+		padding-left: clamp($mobile, $viewport, $default);
+	}
+	.c-py-#{$name} {
+		padding-top: clamp($mobile, $viewport, $default);
+		padding-bottom: clamp($mobile, $viewport, $default);
+	}
+	.c-pl-#{$name} {
+		padding-left: clamp($mobile, $viewport, $default);
+	}
+	.c-pr-#{$name} {
+		padding-right: clamp($mobile, $viewport, $default);
+	}
+	.c-pb-#{$name} {
+		padding-bottom: clamp($mobile, $viewport, $default);
+	}
+	.c-pt-#{$name} {
+		padding-top: clamp($mobile, $viewport, $default);
+	}
+}
+
+@each $name, $values in $layout {
+	$viewport: map.get($values, viewport);
+	$mobile: map.get($values, mobile);
+	$default: map.get($values, default);
+
+	.l-m-#{$name} {
+		margin: clamp($mobile, $viewport, $default);
+	}
+	.l-mx-#{$name} {
+		margin-right: clamp($mobile, $viewport, $default);
+		margin-left: clamp($mobile, $viewport, $default);
+	}
+	.l-my-#{$name} {
+		margin-top: clamp($mobile, $viewport, $default);
+		margin-bottom: clamp($mobile, $viewport, $default);
+	}
+	.l-ml-#{$name} {
+		margin-left: clamp($mobile, $viewport, $default);
+	}
+	.l-mr-#{$name} {
+		margin-right: clamp($mobile, $viewport, $default);
+	}
+	.l-mb-#{$name} {
+		margin-bottom: clamp($mobile, $viewport, $default);
+	}
+	.l-mt-#{$name} {
+		margin-top: clamp($mobile, $viewport, $default);
+	}
+
+	// Padding
+	.l-p-#{$name} {
+		padding: clamp($mobile, $viewport, $default);
+	}
+	.l-px-#{$name} {
+		padding-right: clamp($mobile, $viewport, $default);
+		padding-left: clamp($mobile, $viewport, $default);
+	}
+	.l-py-#{$name} {
+		padding-top: clamp($mobile, $viewport, $default);
+		padding-bottom: clamp($mobile, $viewport, $default);
+	}
+	.l-pl-#{$name} {
+		padding-left: clamp($mobile, $viewport, $default);
+	}
+	.l-pr-#{$name} {
+		padding-right: clamp($mobile, $viewport, $default);
+	}
+	.l-pb-#{$name} {
+		padding-bottom: clamp($mobile, $viewport, $default);
+	}
+	.l-pt-#{$name} {
+		padding-top: clamp($mobile, $viewport, $default);
+	}
+}
+
+@each $name, $values in $component {
+	$default: map.get($values, default);
+
+	.flex-gap-#{$name} {
+		gap: $default;
+	}
+}

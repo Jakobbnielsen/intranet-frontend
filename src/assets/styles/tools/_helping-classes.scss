@@ -1,0 +1,151 @@
+.flex {
+	display: flex;
+}
+
+[class*="flex-"] {
+	display: flex;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.flex-start {
+	justify-content: flex-start;
+}
+
+.flex-space-between {
+	justify-content: space-between;
+}
+
+.flex-center-center {
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-bottom {
+	align-items: flex-end;
+}
+
+.flex-stacked {
+	flex-direction: column;
+}
+
+.flex-vertical-center {
+	align-items: center;
+}
+
+.flex-horizontal-center {
+	justify-content: center;
+}
+
+.flex-horizontal-direction {
+	flex-direction: row;
+}
+
+.flex-revert {
+	flex-flow: row wrap;
+
+	&__item {
+		order: 2;
+	}
+}
+
+.reset-ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.row-ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.reset-btn {
+	margin: unset;
+	padding: unset;
+	border: unset;
+	background-color: unset;
+	cursor: pointer;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.visible-devices,
+.visible-mobile {
+	display: none;
+}
+
+// Alignment
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.hide-overflow {
+	overflow: hidden;
+}
+
+// Colors
+[class*="--color-white"] {
+	color: $color-white;
+}
+
+[class*="--color-orange-atomic"] {
+	color: $color-orange-atomic;
+}
+
+[class*="--color-green-palm-leaf"] {
+	color: $color-green-palm-leaf;
+}
+
+@include viewport-large {
+	.visible-devices {
+		display: block;
+	}
+}
+
+@include viewport-medium {
+	.visible-desktop {
+		display: none;
+	}
+}
+
+@include viewport-small {
+	.visible-mobile {
+		display: block;
+	}
+
+	.reset-flex-s {
+		display: block;
+	}
+
+	.flex-stacked-revers--vp-s {
+		flex-direction: column-reverse;
+	}
+
+	.flex-stacked--vp-s {
+		flex-direction: column;
+	}
+
+	.flex-revert-s {
+		flex-direction: row wrap;
+
+		.flex-revert-s__item {
+			order: 2;
+		}
+	}
+}

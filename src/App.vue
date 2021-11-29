@@ -1,6 +1,11 @@
 <template>
-	<div id="nav"></div>
+	<div id="nav">
+		<NavigationBar />
+	</div>
+	<router-view />
 </template>
+
+<script src="./App.ts"></script>
 
 <style lang="scss">
 	#app {

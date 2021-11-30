@@ -1,0 +1,26 @@
+.outer-grid {
+	display: grid;
+	grid-template:
+		"sidenav header" 100px
+		"sidenav main" 1fr;
+	grid-template-columns: 130px 1fr;
+	min-height: 100vh;
+}
+
+.main-grid {
+	grid-area: main;
+	max-width: $viewport-extra-large;
+}
+
+.sidenav {
+	grid-area: sidenav;
+}
+
+.header-grid {
+	grid-area: header;
+}
+
+//Home
+.home-grid {
+	display: grid;
+}

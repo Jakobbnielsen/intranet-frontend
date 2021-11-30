@@ -1,5 +1,3 @@
-@import "/src/assets/styles/settings/colors";
-
 // transitions
 $transition-cubic: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $transition: 0.5s $transition-cubic;
@@ -16,8 +14,7 @@ $viewport-extra-large: 1440px; // 1200px
 $viewport-max: 1920px; // 1920px
 
 // ------- Helpers -------//
-$box-shadow-blur-10: 0 5px 10px 5px rgba($color-gray-god, 0.05);
-$box-shadow-blur-4: 0 2px 4px 0 rgba($color-gray-god, 0.05);
+// add box shadow blur
 
 // ------- Spacing -------//
 

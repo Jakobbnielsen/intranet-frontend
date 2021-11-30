@@ -1,0 +1,10 @@
+@import "/src/assets/styles/settings/_colors.scss";
+
+.nav-bar {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	background-color: $dark-green;
+	width: 13rem;
+	height: 100vh;
+}

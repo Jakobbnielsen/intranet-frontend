@@ -99,19 +99,6 @@
 	overflow: hidden;
 }
 
-// Colors
-[class*="--color-white"] {
-	color: $color-white;
-}
-
-[class*="--color-orange-atomic"] {
-	color: $color-orange-atomic;
-}
-
-[class*="--color-green-palm-leaf"] {
-	color: $color-green-palm-leaf;
-}
-
 @include viewport-large {
 	.visible-devices {
 		display: block;

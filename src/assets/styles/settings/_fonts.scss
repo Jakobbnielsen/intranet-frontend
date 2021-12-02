@@ -1,0 +1,47 @@
+@font-face {
+	font-family: roboto-regular;
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("~@/assets/fonts/Roboto-Regular.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: roboto-medium;
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("~@/assets/fonts/Roboto-Medium.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: roboto-bold;
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("~@/assets/fonts/Roboto-Bold.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: roboto-black;
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url("~@/assets/fonts/Roboto-Black.ttf") format("ttf");
+}
+
+@mixin font-primary {
+	font-family: roboto-regular, sans-serif;
+}
+
+@mixin font-primary-medium {
+	font-family: roboto-medium, sans-serif;
+}
+
+@mixin font-primary-black {
+	font-family: roboto-bold, sans-serif;
+}
+
+@mixin font-primary-heavy {
+	font-family: roboto-black, sans-serif;
+}

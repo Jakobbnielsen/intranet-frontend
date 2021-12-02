@@ -1,0 +1,15 @@
+@mixin basic-font-style {
+	@include font-primary;
+
+	margin: 0;
+	font-size: clamp(1.4rem, 1.25vw, 1.8rem);
+	line-height: clamp(2.1rem, 1.806vw, 2.6rem);
+}
+
+p,
+.text-default {
+	@include basic-font-style;
+
+	font-size: clamp(1.6rem, 1.25vw, 1.8rem);
+	line-height: clamp(2.4rem, 1.458vw, 2.1rem);
+}

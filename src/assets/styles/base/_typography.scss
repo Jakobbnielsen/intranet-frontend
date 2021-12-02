@@ -6,10 +6,37 @@
 	line-height: clamp(2.1rem, 1.806vw, 2.6rem);
 }
 
+h1,
+.headline-1 {
+	@include font-primary-bold;
+
+	color: $white;
+	font-size: clamp(2.8rem, 2.431vw, 3.8rem);
+	line-height: clamp(3.3rem, 2.847vw, 4.6rem);
+}
+
 p,
 .text-default {
 	@include basic-font-style;
 
 	font-size: clamp(1.6rem, 1.25vw, 1.8rem);
 	line-height: clamp(2.4rem, 1.458vw, 2.1rem);
+}
+
+// custom fonts
+
+.text-navigation {
+	@include font-primary-bold;
+
+	color: $white;
+	font-size: clamp(1.5rem, 1.111vw, 1.7rem);
+	line-height: clamp(2.4rem, 1.458vw, 2.1rem);
+}
+
+.text-welcome {
+	@include font-primary;
+
+	color: $white;
+	font-size: clamp(1.6rem, 1.389vw, 2.4rem);
+	line-height: clamp(2.1rem, 1.597vw, 2.5rem);
 }

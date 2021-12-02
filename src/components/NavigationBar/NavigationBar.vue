@@ -10,7 +10,7 @@
 					:class="{ active: !index }"
 				>
 					<div>logo</div>
-					<p>{{ link.text }}</p>
+					<p class="text-navigation">{{ link.text }}</p>
 				</li>
 			</ul>
 		</nav>

@@ -26,7 +26,7 @@ p,
 // custom fonts
 
 .text-navigation {
-	@include font-primary-bold;
+	@include font-primary-black;
 
 	color: $white;
 	font-size: clamp(1.5rem, 1.111vw, 1.7rem);

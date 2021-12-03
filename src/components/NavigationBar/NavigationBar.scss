@@ -27,3 +27,16 @@
 		background-color: $light-green;
 	}
 }
+
+.item-logo {
+	width: 5.5rem;
+	height: 4.5rem;
+	color: $white;
+}
+
+.nav-item {
+	text-decoration: none;
+	&__logo {
+		margin-bottom: 0.3rem;
+	}
+}

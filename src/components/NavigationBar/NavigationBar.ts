@@ -6,22 +6,26 @@ export default {
 			navLinks: [
 				{
 					url: "/",
-					text: "Home",
+					text: "Hjem",
+					icon: "fas fa-home",
 					showOnlyMobile: false,
 				},
 				{
-					url: "/CompanyPage",
+					url: "/ansatte",
+					text: "Ansatte",
+					icon: "fas fa-users",
+					showOnlyMobile: false,
+				},
+				{
+					url: "/dokumenter",
+					text: "Dokumenter",
+					icon: "far fa-file-alt",
+					showOnlyMobile: false,
+				},
+				{
+					url: "/virksomhed",
 					text: "Company Page",
-					showOnlyMobile: false,
-				},
-				{
-					url: "/DocumentsPage",
-					text: "Documents",
-					showOnlyMobile: false,
-				},
-				{
-					url: "/EmployeePage",
-					text: "Employees",
+					icon: "far fa-building",
 					showOnlyMobile: false,
 				},
 			],

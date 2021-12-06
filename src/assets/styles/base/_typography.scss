@@ -15,6 +15,15 @@ h1,
 	line-height: clamp(3.3rem, 2.847vw, 4.6rem);
 }
 
+h3,
+.headline-3 {
+	@include font-primary-bold;
+
+	color: $black;
+	font-size: clamp(2.2rem, 1.667vw, 2.6rem);
+	line-height: clamp(2.6rem, 1.944vw, 3rem);
+}
+
 p,
 .text-default {
 	@include basic-font-style;
@@ -39,4 +48,19 @@ p,
 	color: $white;
 	font-size: clamp(1.6rem, 1.389vw, 2.4rem);
 	line-height: clamp(2.1rem, 1.597vw, 2.5rem);
+}
+
+.text-projects-name {
+	@include font-primary-bold;
+
+	color: $green;
+	font-size: clamp(2.2rem, 1.667vw, 2.6rem);
+	line-height: clamp(2.6rem, 1.944vw, 3rem);
+}
+
+.text-projects-manager {
+	@include font-primary;
+
+	font-size: clamp(1.4rem, 0.972vw, 1.4rem);
+	line-height: clamp(1.6rem, 1.111vw, 1.6rem);
 }

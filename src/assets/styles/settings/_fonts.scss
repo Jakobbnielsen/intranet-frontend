@@ -1,4 +1,12 @@
 @font-face {
+	font-family: roboto-light;
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url("~@/assets/fonts/Roboto-Light.ttf") format("ttf");
+}
+
+@font-face {
 	font-family: roboto-regular;
 	font-style: normal;
 	font-weight: 400;
@@ -32,6 +40,10 @@
 
 @mixin font-primary {
 	font-family: roboto-regular, sans-serif;
+}
+
+@mixin font-primary-light {
+	font-family: roboto-light, sans-serif;
 }
 
 @mixin font-primary-medium {

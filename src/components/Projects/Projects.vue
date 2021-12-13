@@ -5,7 +5,7 @@
 		class="projects card-style flex flex-stacked flex-space-between"
 		:class="{ active: index === counter }"
 	>
-		<h3>Igangværende projekter {{ counter }}</h3>
+		<h3>Igangværende projekter</h3>
 		<div class="image-section flex flex-space-between flex-vertical-center">
 			<div @click="prev()">
 				<i class="fas fa-arrow-left image-section__icon"></i>

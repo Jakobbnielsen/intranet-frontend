@@ -1,6 +1,6 @@
 import http from "@/http-common";
 
-class IntranetDataServices {
+class ProjectsServices {
 	getAll(): Promise<any> {
 		return http.get("/projects");
 	}
@@ -30,4 +30,4 @@ class IntranetDataServices {
 	// }
 }
 
-export default new IntranetDataServices();
+export default new ProjectsServices();

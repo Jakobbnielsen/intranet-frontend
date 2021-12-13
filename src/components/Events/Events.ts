@@ -1,14 +1,13 @@
-import ProjectsServices from "@/services/ProjectsServices";
-import Projects from "@/types/Projects";
+import EventsServices from "@/services/EventsServices";
+import Events from "@/types/Events";
 import ResponseData from "@/types/ResponseData";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-	name: "Projects",
+	name: "Events",
 	data() {
 		return {
-			Projects: [] as Projects[],
-			counter: 0,
+			Events: [] as Events[],
 		};
 	},
 	mounted() {
@@ -16,24 +15,14 @@ export default defineComponent({
 	},
 	methods: {
 		retrieveTutorials() {
-			ProjectsServices.getAll()
+			EventsServices.getAll()
 				.then((response: ResponseData) => {
-					this.Projects = response.data;
+					this.Events = response.data;
 					console.log(response.data);
 				})
 				.catch((e: Error) => {
 					console.log(e);
 				});
-		},
-		next() {
-			if (!(this.counter >= 1)) {
-				this.counter += 1;
-			}
-		},
-		prev() {
-			if (!(this.counter <= 0)) {
-				this.counter -= 1;
-			}
 		},
 	},
 });

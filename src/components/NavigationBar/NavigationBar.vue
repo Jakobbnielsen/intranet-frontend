@@ -2,7 +2,9 @@
 	<header>
 		<nav class="nav-bar">
 			<!-- placeholder icon -->
-			<div class="nav-bar__logo flex flex-center-center"><i class="far fa-comment item-logo"></i></div>
+			<router-link to="/" class="nav-bar__logo flex flex-center-center"
+				><i class="fas fa-people-carry item-logo"></i
+			></router-link>
 			<ul class="nav-list flex flex-stacked">
 				<li
 					v-for="(link, index) in navLinks"

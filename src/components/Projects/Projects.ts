@@ -8,6 +8,7 @@ export default defineComponent({
 	data() {
 		return {
 			Projects: [] as Projects[],
+			counter: 0,
 		};
 	},
 	mounted() {
@@ -23,6 +24,16 @@ export default defineComponent({
 				.catch((e: Error) => {
 					console.log(e);
 				});
+		},
+		next() {
+			if (!(this.counter >= 1)) {
+				this.counter += 1;
+			}
+		},
+		prev() {
+			if (!(this.counter <= 0)) {
+				this.counter -= 1;
+			}
 		},
 	},
 });

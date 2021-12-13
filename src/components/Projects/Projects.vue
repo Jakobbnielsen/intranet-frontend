@@ -1,14 +1,25 @@
 <template>
-	<div v-for="item in Projects" :key="item.id" class="projects card-style flex flex-stacked flex-center-center">
-		<h3>Igangværende projekter</h3>
+	<div
+		v-for="(item, index) in Projects"
+		:key="index"
+		class="projects card-style flex flex-stacked flex-space-between"
+		:class="{ active: index === counter }"
+	>
+		<h3>Igangværende projekter {{ counter }}</h3>
 		<div class="image-section flex flex-space-between flex-vertical-center">
-			<i class="fas fa-arrow-left image-section__icon"></i>
+			<div @click="prev()">
+				<i class="fas fa-arrow-left image-section__icon"></i>
+			</div>
 			<img
+				v-if="item.projectImage"
 				:src="'https://lait-intranet-backend.herokuapp.com' + item.projectImage.url"
 				alt=""
 				class="image-section__image"
 			/>
-			<i class="fas fa-arrow-right image-section__icon"></i>
+			<img v-else alt="" class="image-section__image" />
+			<div @click="next()">
+				<i class="fas fa-arrow-right image-section__icon"></i>
+			</div>
 		</div>
 		<p class="text-projects-name">{{ item.projectTitle }}</p>
 		<p class="text-projects-manager">Projekt manager: {{ item.projectManager }}</p>

@@ -25,9 +25,9 @@
 				/>
 				<img v-else alt="" class="image-section__image" />
 			</div>
-			<div class="flex flex-stacked">
-				<p>{{ item.title }}</p>
-				<p>{{ item.message }}</p>
+			<div class="text-section flex flex-stacked">
+				<p class="text-section__title text-post-title">{{ item.title }}</p>
+				<p class="text-section__message text-bold">{{ item.message }}</p>
 			</div>
 			<div @click="next()">
 				<i class="fas fa-arrow-right image-section__icon"></i>

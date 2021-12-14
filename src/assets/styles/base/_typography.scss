@@ -86,3 +86,10 @@ p,
 	font-size: clamp(1.4rem, 0.972vw, 1.4rem);
 	line-height: clamp(1.6rem, 1.111vw, 1.6rem);
 }
+
+.text-post-title {
+	@include font-primary-bold;
+
+	font-size: clamp(2rem, 1.667vw, 2.8rem);
+	line-height: clamp(2.4rem, 1.944vw, 3.2rem);
+}

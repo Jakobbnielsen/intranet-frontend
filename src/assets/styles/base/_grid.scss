@@ -18,10 +18,17 @@
 //Home
 .home-grid {
 	display: grid;
-	grid-template: "welcome sidebar" 1fr;
+	grid-template:
+		"welcome sidebar"
+		"highlighted sidebar";
 	grid-template-columns: 1fr 33.3rem;
+	grid-template-rows: 14rem 1fr;
 	grid-gap: 4rem;
 	height: auto;
+}
+
+.highlighted-grid {
+	grid-area: highlighted;
 }
 
 .welcome-grid {

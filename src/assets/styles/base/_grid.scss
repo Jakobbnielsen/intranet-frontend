@@ -21,10 +21,15 @@
 	grid-template:
 		"welcome sidebar" auto
 		"highlighted sidebar" 1fr
+		"create-post sidebar" 1fr
 		"posts-feed sidebar" 1fr
 		"posts-feed sidebar" auto / minmax(0, 1fr) 33.3rem;
 	grid-gap: 4rem;
 	height: auto;
+}
+
+.create-post-grid {
+	grid-area: create-post;
 }
 
 .posts-feed-grid {

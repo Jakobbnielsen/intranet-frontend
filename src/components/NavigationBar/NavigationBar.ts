@@ -16,18 +16,18 @@ export default {
 					icon: "fas fa-users",
 					showOnlyMobile: false,
 				},
-				{
-					url: "/dokumenter",
-					text: "Dokumenter",
-					icon: "far fa-file-alt",
-					showOnlyMobile: false,
-				},
-				{
-					url: "/virksomhed",
-					text: "Company Page",
-					icon: "far fa-building",
-					showOnlyMobile: false,
-				},
+				// {
+				// 	url: "/dokumenter",
+				// 	text: "Dokumenter",
+				// 	icon: "far fa-file-alt",
+				// 	showOnlyMobile: false,
+				// },
+				// {
+				// 	url: "/virksomhed",
+				// 	text: "Company Page",
+				// 	icon: "far fa-building",
+				// 	showOnlyMobile: false,
+				// },
 			],
 		};
 	},

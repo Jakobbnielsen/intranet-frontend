@@ -1,3 +1,4 @@
+import CreatePost from "@/components/CreatePost/CreatePost.vue";
 import HighlightedPosts from "@/components/HighlightedPosts/HighlightedPosts.vue";
 import PostsFeed from "@/components/PostsFeed/PostsFeed.vue";
 import SideBar from "@/components/SideBar/SideBar.vue";
@@ -10,5 +11,6 @@ export default {
 		Welcome,
 		HighlightedPosts,
 		PostsFeed,
+		CreatePost,
 	},
 };

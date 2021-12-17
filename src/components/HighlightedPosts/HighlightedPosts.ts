@@ -1,6 +1,8 @@
 import PostsServices from "@/services/PostsServices";
 import Posts from "@/types/Posts";
 import ResponseData from "@/types/ResponseData";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -9,10 +11,13 @@ export default defineComponent({
 		return {
 			Posts: [] as Posts[],
 			counter: 0,
+			dayjs,
+			relativeTime,
 		};
 	},
 	mounted() {
 		this.retrieveTutorials();
+		dayjs.extend(relativeTime);
 	},
 	methods: {
 		retrieveTutorials() {
@@ -26,7 +31,7 @@ export default defineComponent({
 				});
 		},
 		next() {
-			if (!(this.counter >= 2)) {
+			if (!(this.counter >= 1)) {
 				this.counter += 1;
 			}
 		},

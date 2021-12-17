@@ -3,13 +3,13 @@
 		v-for="(item, index) in Posts"
 		:key="item.id"
 		class="post-section card-style"
-		:class="{ active: index === counter }"
+		:class="{ active: index === counter && item.mustRead === true }"
 	>
 		<div class="author-section flex">
 			<i class="fas fa-user-circle author-section__icon"></i>
 			<div class="flex flex-stacked flex-space-between">
 				<p>{{ item.author }}</p>
-				<p>{{ item.uploadedDate }}</p>
+				<p>{{ dayjs(item.uploadedDate).fromNow(true) }}</p>
 			</div>
 		</div>
 		<div class="image-section flex flex-space-between flex-vertical-center">

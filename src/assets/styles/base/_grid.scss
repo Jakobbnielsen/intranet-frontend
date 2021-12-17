@@ -19,12 +19,18 @@
 .home-grid {
 	display: grid;
 	grid-template:
-		"welcome sidebar"
-		"highlighted sidebar";
-	grid-template-columns: 1fr 33.3rem;
-	grid-template-rows: 14rem 1fr;
+		"welcome sidebar" auto
+		"highlighted sidebar" 1fr
+		"posts-feed sidebar" 1fr
+		"posts-feed sidebar" auto / minmax(0, 1fr) 33.3rem;
 	grid-gap: 4rem;
 	height: auto;
+}
+
+.posts-feed-grid {
+	grid-area: posts-feed;
+	display: grid;
+	grid-template-columns: 1fr 400px;
 }
 
 .highlighted-grid {

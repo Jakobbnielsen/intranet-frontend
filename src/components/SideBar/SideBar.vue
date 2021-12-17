@@ -1,5 +1,5 @@
 <template>
-	<div class="sidebar flex flex-stacked flex-center-center">
+	<div class="sidebar flex flex-stacked">
 		<Events />
 		<Projects />
 	</div>

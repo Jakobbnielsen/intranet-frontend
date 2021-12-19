@@ -1,4 +1,6 @@
 @import "/src/assets/styles/settings/_colors.scss";
+@import "/src/assets/styles/tools/_mixins.scss";
+@import "/src/assets/styles/settings/_vars.scss";
 
 .nav-bar {
 	position: fixed;
@@ -6,7 +8,7 @@
 	flex-direction: column;
 	background-color: $dark-green;
 	width: 13rem;
-	height: 100vh;
+	height: 100%;
 
 	&__logo {
 		width: 100%;
@@ -38,5 +40,12 @@
 	text-decoration: none;
 	&__logo {
 		margin-bottom: 0.3rem;
+	}
+}
+
+
+@include viewport-medium {
+	.nav-bar {
+		width: 8rem;
 	}
 }

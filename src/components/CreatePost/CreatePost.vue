@@ -1,10 +1,32 @@
 <template>
-	<div class="post-section card-style">
-		<div class="author-section flex">
+	<div class="post-section card-style flex">
+		<div class="author-section">
 			<i class="fas fa-user-circle author-section__icon"></i>
 		</div>
-		<div class="form-section flex flex-space-between flex-vertical-center">
-			<textarea name="" id="" cols="30" rows="10"></textarea>
+		<div class="submit-form flex flex-stacked">
+			<div v-if="!submitted" class="form flex flex-stacked">
+				<div class="form-group flex flex-stacked">
+					<p>Title</p>
+					<input type="text" class="form-control" id="title" required v-model="Posts.title" name="title" />
+				</div>
+
+				<div class="form-group flex flex-stacked">
+					<p>Author</p>
+					<input class="form-control" id="author" required v-model="Posts.author" name="description" />
+				</div>
+				<div class="form-group flex flex-stacked">
+					<p>Description</p>
+					<textarea
+						class="form-control"
+						id="message"
+						rows="3"
+						required
+						v-model="Posts.message"
+						name="description"
+					/>
+				</div>
+			</div>
+			<button @click="saveTutorial" class="btn btn-success">Opret</button>
 		</div>
 	</div>
 </template>

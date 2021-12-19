@@ -12,7 +12,7 @@
 				<p>{{ dayjs(item.uploadedDate).fromNow(true) }}</p>
 			</div>
 		</div>
-		<div class="image-section flex flex-space-between flex-vertical-center">
+		<div class="image-section flex flex-vertical-center">
 			<div @click="prev()">
 				<i class="fas fa-arrow-left image-section__icon"></i>
 			</div>
@@ -29,7 +29,7 @@
 				<p class="text-section__title text-post-title">{{ item.title }}</p>
 				<p class="text-section__message text-bold">{{ item.message }}</p>
 			</div>
-			<div @click="next()">
+			<div class="right" @click="next()">
 				<i class="fas fa-arrow-right image-section__icon"></i>
 			</div>
 		</div>

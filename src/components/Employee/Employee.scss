@@ -1,0 +1,47 @@
+@import "/src/assets/styles/settings/_colors.scss";
+@import "/src/assets/styles/tools/_mixins.scss";
+@import "/src/assets/styles/settings/_vars.scss";
+
+
+
+.employee-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 0;
+}
+
+.employee-item {
+    background-color: $white;
+    padding: 1rem;
+    text-align: center;
+
+    &__icon {
+        width: 8rem;
+        height: 6rem;
+    }
+    &__title {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.search {
+    width: 25%;
+    padding: 1rem;
+}
+
+.search-label {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+@include viewport-medium {
+    .employee-section {
+        grid-template-columns: 1fr;
+    }
+
+    .search {
+        width: 100%;
+    }
+}

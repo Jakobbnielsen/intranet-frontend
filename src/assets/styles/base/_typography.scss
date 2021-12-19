@@ -73,6 +73,14 @@ p,
 	line-height: clamp(1.6rem, 1.111vw, 1.6rem);
 }
 
+.text-green-title {
+	@include font-primary-bold;
+
+	color: $dark-green;
+	font-size: clamp(1.8rem, 1.311vw, 1.8rem);
+	line-height: clamp(1.6rem, 1.111vw, 1.6rem);
+}
+
 .text-bold {
 	@include font-primary-bold;
 

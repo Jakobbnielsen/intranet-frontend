@@ -1,9 +1,11 @@
 <template>
 	<div class="home-grid">
 		<Welcome class="welcome-grid" />
-		<HighlightedPosts class="highlighted-grid" />
-		<CreatePost class="create-post-grid" />
-		<PostsFeed class="posts-feed-grid" />
+		<div class="feed-grid">
+			<HighlightedPosts />
+			<CreatePost />
+			<PostsFeed />
+		</div>
 		<SideBar class="sidebar-grid" />
 	</div>
 </template>

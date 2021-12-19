@@ -7,7 +7,6 @@
 
 .main-grid {
 	grid-area: main;
-	max-width: $viewport-extra-large;
 	padding: 5rem;
 }
 
@@ -20,26 +19,14 @@
 	display: grid;
 	grid-template:
 		"welcome sidebar" auto
-		"highlighted sidebar" 1fr
-		"create-post sidebar" 1fr
-		"posts-feed sidebar" 1fr
-		"posts-feed sidebar" auto / minmax(0, 1fr) 33.3rem;
+		"feed sidebar" 1fr
+		"feed sidebar" auto / minmax(0, 1fr) 33.3rem;
 	grid-gap: 4rem;
 	height: auto;
 }
 
-.create-post-grid {
-	grid-area: create-post;
-}
-
-.posts-feed-grid {
-	grid-area: posts-feed;
-	display: grid;
-	grid-template-columns: 1fr 400px;
-}
-
-.highlighted-grid {
-	grid-area: highlighted;
+.feed-grid {
+	grid-area: feed;
 }
 
 .welcome-grid {
@@ -48,4 +35,24 @@
 
 .sidebar-grid {
 	grid-area: sidebar;
+}
+
+@include viewport-custom-max(1200px) {
+	.sidebar {
+		display: none;
+	}
+
+	.home-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@include viewport-medium {
+	.outer-grid {
+		grid-template-columns: 8rem 1fr;
+	}
+
+	.main-grid {
+        padding: 2rem;
+    }
 }

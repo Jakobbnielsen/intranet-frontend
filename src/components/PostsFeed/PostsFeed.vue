@@ -7,7 +7,7 @@
 				<p>{{ dayjs(item.uploadedDate).fromNow(true) }}</p>
 			</div>
 		</div>
-		<div class="image-section flex flex-space-between flex-vertical-center">
+		<div class="image-section flex flex-vertical-center">
 			<div class="flex">
 				<img
 					v-if="item.image"

@@ -4,7 +4,7 @@
 			<i class="fas fa-user-circle author-section__icon"></i>
 			<div class="flex flex-stacked flex-space-between">
 				<p>{{ item.author }}</p>
-				<p>{{ dayjs(item.uploadedDate).fromNow(true) }}</p>
+				<p>{{ dayjs(item.uploadedDate).fromNow() }}</p>
 			</div>
 		</div>
 		<div class="image-section flex flex-vertical-center">

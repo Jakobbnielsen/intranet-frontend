@@ -1,6 +1,5 @@
 import EventsServices from "@/services/EventsServices";
 import Events from "@/types/Events";
-import ResponseData from "@/types/ResponseData";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -16,7 +15,7 @@ export default defineComponent({
 	methods: {
 		retrieveTutorials() {
 			EventsServices.getAll()
-				.then((response: ResponseData) => {
+				.then((response: any) => {
 					this.Events = response.data;
 					console.log(response.data);
 				})

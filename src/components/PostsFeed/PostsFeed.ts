@@ -12,7 +12,6 @@ export default defineComponent({
 			Posts: [] as Posts[],
 			counter: 0,
 			dayjs,
-			relativeTime,
 		};
 	},
 	mounted() {

@@ -16,7 +16,7 @@ const routes: Array<RouteRecordRaw> = [
 		component: EmployeePage,
 	},
 	{
-		path: "/dokumenter",
+		path: "/dokumenter/:id",
 		name: "Dokumenter",
 		component: DocumentsPage,
 	},

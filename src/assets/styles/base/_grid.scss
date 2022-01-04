@@ -49,10 +49,16 @@
 
 @include viewport-medium {
 	.outer-grid {
-		grid-template-columns: 8rem 1fr;
+		grid-template: "main"
+		"sidenav";
+		grid-template-columns: 1fr;
 	}
 
 	.main-grid {
         padding: 2rem;
     }
+
+	.home-grid {
+		grid-column-gap: 0;
+	}
 }

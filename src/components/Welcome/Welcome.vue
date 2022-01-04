@@ -1,5 +1,5 @@
 <template>
-	<div class="">
+	<div class="welcome">
 		<h1>Velkommen</h1>
 		<p class="text-welcome">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, fugiat quas. Voluptas velit omnis

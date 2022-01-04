@@ -1,0 +1,9 @@
+@import "/src/assets/styles/settings/_colors.scss";
+@import "/src/assets/styles/tools/_mixins.scss";
+@import "/src/assets/styles/settings/_vars.scss";
+
+@include viewport-medium {
+    .welcome {
+        text-align: center;
+    }
+}

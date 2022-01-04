@@ -48,6 +48,19 @@
 
 @include viewport-medium {
 	.nav-bar {
-		width: 8rem;
+		bottom: 0;
+		width: 100%;
+		height: 9rem;
+		flex-direction: row;
+
+		&__logo {
+			display: none;
+		}
+	}
+
+	.nav-list {
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 100%;
 	}
 }

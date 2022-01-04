@@ -51,7 +51,8 @@
 	.outer-grid {
 		grid-template: "main"
 		"sidenav";
-		grid-template-columns: 1fr;
+		grid-template-columns: 100vw;
+		min-height: 0;
 	}
 
 	.main-grid {
@@ -60,5 +61,9 @@
 
 	.home-grid {
 		grid-column-gap: 0;
+		grid-template: "welcome"
+		"feed"
+		"feed";
+		grid-template-columns: 1fr;
 	}
 }

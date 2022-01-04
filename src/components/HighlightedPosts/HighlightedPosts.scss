@@ -1,4 +1,6 @@
 @import "/src/assets/styles/settings/_colors.scss";
+@import "/src/assets/styles/tools/_mixins.scss";
+@import "/src/assets/styles/settings/_vars.scss";
 
 .post-section {
 	width: 100%;
@@ -54,4 +56,10 @@
 
 .right {
 	margin-left: auto;
+}
+
+@include viewport-medium {
+	.image-section img {
+		display: none;
+	}
 }

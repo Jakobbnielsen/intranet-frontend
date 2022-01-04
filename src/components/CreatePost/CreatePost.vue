@@ -1,4 +1,5 @@
 <template>
+	<h2>Opret et post</h2>
 	<div class="post-section card-style flex">
 		<div class="author-section">
 			<i class="fas fa-user-circle author-section__icon"></i>

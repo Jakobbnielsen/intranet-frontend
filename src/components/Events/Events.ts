@@ -17,7 +17,7 @@ export default defineComponent({
 			EventsServices.getAll()
 				.then((response: any) => {
 					this.Events = response.data;
-					console.log(response.data);
+					console.log(response);
 				})
 				.catch((e: Error) => {
 					console.log(e);

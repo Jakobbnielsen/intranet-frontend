@@ -1,4 +1,6 @@
 @import "/src/assets/styles/settings/_colors.scss";
+@import "/src/assets/styles/tools/_mixins.scss";
+@import "/src/assets/styles/settings/_vars.scss";
 
 .post-section {
 	align-self: center;
@@ -43,4 +45,10 @@
 	border: solid 1px $light-green;
 	border-radius: 6px;
 	padding: 0.5rem 1.5rem;
+}
+
+@include viewport-medium {
+	.author-section {
+		display: none;
+	}
 }

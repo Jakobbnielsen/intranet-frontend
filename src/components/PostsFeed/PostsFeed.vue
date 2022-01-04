@@ -1,4 +1,5 @@
 <template>
+	<h2>Se seneste opslag</h2>
 	<div v-for="item in Posts" :key="item.id" class="post-section card-style">
 		<div class="author-section flex">
 			<i class="fas fa-user-circle author-section__icon"></i>

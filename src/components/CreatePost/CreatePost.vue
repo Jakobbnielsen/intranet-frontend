@@ -8,12 +8,27 @@
 			<div v-if="!submitted" class="form flex flex-stacked">
 				<div class="form-group flex flex-stacked">
 					<p>Title</p>
-					<input type="text" class="form-control" id="title" required v-model="Posts.title" name="title" />
+					<input
+						type="text"
+						class="form-control"
+						id="title"
+						required
+						v-model="Posts.title"
+						name="title"
+						placeholder="Indtast titel..."
+					/>
 				</div>
 
 				<div class="form-group flex flex-stacked">
 					<p>Author</p>
-					<input class="form-control" id="author" required v-model="Posts.author" name="description" />
+					<input
+						class="form-control"
+						id="author"
+						required
+						v-model="Posts.author"
+						name="description"
+						placeholder="Indtast forfatter..."
+					/>
 				</div>
 				<div class="form-group flex flex-stacked">
 					<p>Description</p>
@@ -24,6 +39,7 @@
 						required
 						v-model="Posts.message"
 						name="description"
+						placeholder="Indtast beskrivelse..."
 					/>
 				</div>
 			</div>

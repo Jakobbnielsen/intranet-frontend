@@ -1,4 +1,5 @@
 <template>
+	<h2>Nyheder fra ledelsen</h2>
 	<div
 		v-for="(item, index) in Posts"
 		:key="item.id"

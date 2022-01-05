@@ -23,6 +23,9 @@ export default defineComponent({
 			PostsServices.getAll()
 				.then((response: ResponseData) => {
 					this.Posts = response.data;
+					this.Posts = this.Posts.sort(function (a: any, b: any) {
+						return b.id - a.id;
+					});
 					console.log(response.data);
 				})
 				.catch((e: Error) => {

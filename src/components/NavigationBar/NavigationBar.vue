@@ -3,8 +3,8 @@
 		<nav class="nav-bar">
 			<!-- placeholder icon -->
 			<router-link to="/" class="nav-bar__logo flex flex-center-center"
-				><i class="fas fa-people-carry item-logo"></i
-			></router-link>
+				><img src="@/assets/icons/logo.svg" alt="" class="logo-item"
+			/></router-link>
 			<ul class="nav-list flex flex-stacked">
 				<li
 					v-for="(link, index) in navLinks"
